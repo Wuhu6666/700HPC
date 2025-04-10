@@ -1,5 +1,11 @@
 # 700HPC
 
+## To run
+`python3 wrapper.py` 
+
+
+## quicksort times:
+##### getting the max recursion depth reached.
 
 ## heap_sort times: 
 Time taken for half_sorted_1000.txt: 0.0020
