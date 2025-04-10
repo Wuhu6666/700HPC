@@ -1,5 +1,8 @@
 import time
 from bubble import bubble_sort
+from introSort import introsort
+from heapSort import heap_sort
+from quickSort import quickSort
 
 inputList = ['Half_Sorted/half_sorted_1000.txt']    
 inputList.append('Half_Sorted/half_sorted_5000.txt')
@@ -25,12 +28,12 @@ inputList.append('Sorted/Sorted_10000.txt')
 inputList.append('Sorted/Sorted_50000.txt')
 inputList.append('Sorted/Sorted_100000.txt')
 
-
-sortingAlgos=[bubble_sort]
+sortingAlgos=[quickSort, heap_sort , introsort, bubble_sort]
 
 for algo in sortingAlgos:
     
     print(f"{algo.__name__} times: ")
+    
     for path in inputList:
         
         with open(path,'r') as fin:
@@ -43,7 +46,19 @@ for algo in sortingAlgos:
         
         # print(inputarray[1:10])
         start = time.time()
-        bubble_sort(inputarray)
+        
+        if(algo is quickSort):
+            # quickSort(inputarray, 0, len(inputarray)-1)
+            print("quick sort subdued temporarily")
+        elif(algo is heap_sort):
+            heap_sort(inputarray)
+        elif(algo is introsort):
+            introsort(inputarray)
+        elif(algo is bubble_sort):
+            bubble_sort(inputarray)
+        else:
+            print(f"{algo} is not defined properly")  
+                  
         end = time.time()
 
         print(f"Time taken for {path.split("/")[1]}: {end-start:.4f}")
