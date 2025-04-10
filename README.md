@@ -5,7 +5,7 @@
 
 
 ## quicksort times:
-##### getting the max recursion depth reached.
+##### getting the max recursion depth reached. Need to further inspect
 
 ## heap_sort times: 
 
