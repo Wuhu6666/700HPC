@@ -1,60 +1,33 @@
-# Program to implement QuickSort Algorithm in Python
+def partition(array, low, high):
 
+    # choose the rightmost element as pivot
+    pivot = array[high]
 
-'''
-This function takes last element as pivot, places  the pivot element at
-its correct position in sorted  array, and places all smaller(smaller than
-pivot) to left of pivot and all greater elements to right  of pivot
-'''
-
-
-def partition(arr, low, high):
-    '''
-    The value of i is initialized to (low-1) since initially first element
-    is swapped by itself
-    Reason: no greater element has been encountered apart from itself
-    '''
-    pivotElement = arr[high]
-    i = (low - 1)
-
+    # pointer for greater element
+    i = low - 1
     for j in range(low, high):
-        if arr[j] < pivotElement:
-            i += 1
-            # swap elements arr[i] and arr[j]
-            arr[i], arr[j] = arr[j], arr[i]
+        if array[j] <= pivot:
+            i = i + 1
+            (array[i], array[j]) = (array[j], array[i])
 
-    # swap pivot element with element at index=(i + 1) since loop ended,
-    # to obtain LHS of pivot
-    arr[i + 1], arr[high] = arr[high], arr[i + 1]
-
-    return(i + 1)
-
-'''
-This is the calling function that implements QuickSort algorithm, where:
-arr = input array given by user
-low = starting index
-high = ending index
-'''
+    (array[i + 1], array[high]) = (array[high], array[i + 1])
+    return i + 1
 
 
-def quickSort(arr, low, high):
+def quickSort(array, low, high):
     if low < high:
+        pi = partition(array, low, high)
+        quickSort(array, low, pi - 1)
+        quickSort(array, pi + 1, high)
 
-        # pi is partitioning index, arr[p] is now at right place
-        pi = partition(arr, low, high)
 
-        # Separately sort elements before partition and after partition
-        quickSort(arr, low, pi-1)
-        quickSort(arr, pi+1, high)
+# data = [1, 7, 4, 1, 10, 9, -2]
+# print("Unsorted Array")
+# print(data)
 
-# main function
-# if __name__ == "__main__":
-#     n = int(input())
-#     arr = list(map(int, input().split()))
-#     n = len(arr)
-#     quickSort(arr, 0, len(arr)-1)
+# size = len(data)
 
-#     # print the final sorted array in ASCending order
-#     for i in range(n):
-#         print(arr[i], end=" ")
-#     print()
+# quickSort(data, 0, size - 1)
+
+# print('Sorted Array in Ascending Order:')
+# print(data)
