@@ -66,27 +66,40 @@ for algo in sortingAlgos:
             inputarray = [int(line) for line in lines]
         '''        
         # print(inputarray[1:10])
-        start = time.time()
         
         if(algo is quickSort):
+            start = time.time()
             quickSort(inputarray, 0, len(inputarray) - 1)
+            end = time.time()
         elif(algo is heap_sort):
+            start = time.time()
             heap_sort(inputarray)
+            end = time.time()
         elif(algo is introsort):
+            start = time.time()
             introsort(inputarray)
+            end = time.time()
         elif(algo is bubble_sort):
+            start = time.time()
             bubble_sort(inputarray)
+            end = time.time()
         elif(algo is TimSort):
+            start = time.time()
             TimSort(inputarray)
+            end = time.time()
         elif(algo is selectionSort):
+            start = time.time()
             selectionSort(inputarray, len(inputarray))
+            end = time.time()
         elif(algo is insertion_sort):
+            start = time.time()
             insertion_sort(inputarray)
+            end = time.time()
         elif(algo is mergeSort):
+            start = time.time()
             mergeSort(inputarray, 0, len(inputarray)-1)
+            end = time.time()
         else:
             print(f"{algo} is not defined properly")  
                   
-        end = time.time()
-
         print(f"Time taken for {path.split("/")[1]}: {end-start:.4f}")
