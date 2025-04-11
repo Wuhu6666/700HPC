@@ -9,31 +9,39 @@ from selectionSort import selectionSort
 from insertionSort import insertion_sort
 from mergeSort import mergeSort
 
-inputList = ['Half_Sorted/half_sorted_1000.txt']    
+# inputList = ['Half_Sorted/half_sorted_1000.txt']    
 
-inputList.append('Half_Sorted/half_sorted_5000.txt')
-inputList.append('Half_Sorted/half_sorted_10000.txt')
-inputList.append('Half_Sorted/half_sorted_50000.txt')
-inputList.append('Half_Sorted/half_sorted_100000.txt')
+# inputList.append('Half_Sorted/half_sorted_5000.txt')
+# inputList.append('Half_Sorted/half_sorted_10000.txt')
+# inputList.append('Half_Sorted/half_sorted_50000.txt')
+# inputList.append('Half_Sorted/half_sorted_100000.txt')
     
-inputList.append('Random/random_numbers_1000.txt')
-inputList.append('Random/random_numbers_5000.txt')
-inputList.append('Random/random_numbers_10000.txt') 
-inputList.append('Random/random_numbers_50000.txt') 
-inputList.append('Random/random_numbers_100000.txt')
+# inputList.append('Random/random_numbers_1000.txt')
+# inputList.append('Random/random_numbers_5000.txt')
+# inputList.append('Random/random_numbers_10000.txt') 
+# inputList.append('Random/random_numbers_50000.txt') 
+# inputList.append('Random/random_numbers_100000.txt')
 
-inputList.append('Reversed/reverse_1000-float.txt')
-inputList.append('Reversed/reverse_5000-float.txt')
-inputList.append('Reversed/reverse_10000-float.txt')
-inputList.append('Reversed/reverse_50000-float.txt')
-inputList.append('Reversed/reverse_100000-float.txt')
+# inputList.append('Reversed/reverse_1000-float.txt')
+# inputList.append('Reversed/reverse_5000-float.txt')
+# inputList.append('Reversed/reverse_10000-float.txt')
+# inputList.append('Reversed/reverse_50000-float.txt')
+# inputList.append('Reversed/reverse_100000-float.txt')
     
-inputList.append('Sorted/Sorted_1000.txt')
-inputList.append('Sorted/Sorted_5000.txt')
-inputList.append('Sorted/Sorted_10000.txt')
-inputList.append('Sorted/Sorted_50000.txt')
-inputList.append('Sorted/Sorted_100000.txt')
+# inputList.append('Sorted/Sorted_1000.txt')
+# inputList.append('Sorted/Sorted_5000.txt')
+# inputList.append('Sorted/Sorted_10000.txt')
+# inputList.append('Sorted/Sorted_50000.txt')
+# inputList.append('Sorted/Sorted_100000.txt')
 
+
+inputList = ['largeDatasets/half_sorted_50m.txt']
+inputList.append('largeDatasets/half_sorted_100m.txt')
+inputList.append('largeDatasetss/random_numbers_50m.txt')
+inputList.append('largeDatasets/reverse_50m-floats.txt')
+inputList.append('largeDatasets/Sorted_50m.txt')
+inputList.append('largeDatasets/Sorted_100m.txt')
+ 
 
 # ------------------------------------------------
 
@@ -46,7 +54,7 @@ inputList.append('Sorted/Sorted_100000.txt')
 sortingAlgos=[TimSort, quickSort, heap_sort, introsort, 
               selectionSort, insertion_sort ,bubble_sort]
 
-sys.setrecursionlimit(1000000) # python's default recusion limit is 1000. Need this for quick sort sorted input case
+sys.setrecursionlimit(1000000000) # python's default recusion limit is 1000. Need this for quick sort sorted input case
 
 for algo in sortingAlgos:
     
