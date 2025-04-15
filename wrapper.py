@@ -14,37 +14,37 @@ from basis import Hybrid_sort_700_run
 
 inputList = ['Half_Sorted/half_sorted_1000.txt']    
 
-inputList.append('Half_Sorted/half_sorted_5000.txt')
-inputList.append('Half_Sorted/half_sorted_10000.txt')
-inputList.append('Half_Sorted/half_sorted_50000.txt')
-inputList.append('Half_Sorted/half_sorted_100000.txt')
+# inputList.append('Half_Sorted/half_sorted_5000.txt')
+# inputList.append('Half_Sorted/half_sorted_10000.txt')
+# inputList.append('Half_Sorted/half_sorted_50000.txt')
+# inputList.append('Half_Sorted/half_sorted_100000.txt')
     
 inputList.append('Random/random_numbers_1000.txt')
 inputList.append('Random/random_numbers_5000.txt')
 inputList.append('Random/random_numbers_10000.txt') 
 inputList.append('Random/random_numbers_50000.txt') 
-inputList.append('Random/random_numbers_100000.txt')
+# inputList.append('Random/random_numbers_100000.txt')
 #100m
 
 inputList.append('Reversed/reverse_1000-float.txt')
 inputList.append('Reversed/reverse_5000-float.txt')
 inputList.append('Reversed/reverse_10000-float.txt')
 inputList.append('Reversed/reverse_50000-float.txt')
-inputList.append('Reversed/reverse_100000-float.txt')
+# inputList.append('Reversed/reverse_100000-float.txt')
 #100m
     
 inputList.append('Sorted/Sorted_1000.txt')
 inputList.append('Sorted/Sorted_5000.txt')
 inputList.append('Sorted/Sorted_10000.txt')
 inputList.append('Sorted/Sorted_50000.txt')
-inputList.append('Sorted/Sorted_100000.txt')
+# inputList.append('Sorted/Sorted_100000.txt')
 #50m
 #100m
 
-inputList.append('largeDatasets/half_sorted_50m.txt')
-inputList.append('largeDatasets/half_sorted_100m.txt')
-inputList.append('largeDatasets/random_numbers_50m.txt')
-inputList.append('largeDatasets/reverse_50m-floats.txt')
+# inputList.append('largeDatasets/half_sorted_50m.txt')
+# inputList.append('largeDatasets/half_sorted_100m.txt')
+# inputList.append('largeDatasets/random_numbers_50m.txt')
+# inputList.append('largeDatasets/reverse_50m-floats.txt')
 
 ## try for 100m random, reverse later
 
