@@ -37,10 +37,10 @@ from mergeSort import mergeSort
 
 inputList = ['largeDatasets/half_sorted_50m.txt']
 inputList.append('largeDatasets/half_sorted_100m.txt')
-inputList.append('largeDatasetss/random_numbers_50m.txt')
+inputList.append('largeDatasets/random_numbers_50m.txt')
 inputList.append('largeDatasets/reverse_50m-floats.txt')
-inputList.append('largeDatasets/Sorted_50m.txt')
-inputList.append('largeDatasets/Sorted_100m.txt')
+# inputList.append('largeDatasets/Sorted_50m.txt')
+# inputList.append('largeDatasets/Sorted_100m.txt')
  
 
 # ------------------------------------------------
