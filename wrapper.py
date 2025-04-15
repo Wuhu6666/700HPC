@@ -1,6 +1,7 @@
 import time
 import sys
 import statistics
+import numpy as np
 from bubble import bubble_sort
 from introSort import introsort
 from heapSort import heap_sort
@@ -9,6 +10,7 @@ from timSort import TimSort
 from selectionSort import selectionSort
 from insertionSort import insertion_sort
 from mergeSort import mergeSort
+from basis import Hybrid_sort_700_run
 
 inputList = ['Half_Sorted/half_sorted_1000.txt']    
 
@@ -44,6 +46,8 @@ inputList.append('largeDatasets/half_sorted_100m.txt')
 inputList.append('largeDatasets/random_numbers_50m.txt')
 inputList.append('largeDatasets/reverse_50m-floats.txt')
 
+## try for 100m random, reverse later
+
 
 # inputList = ['largeDatasets/half_sorted_50m.txt']
 # inputList.append('largeDatasets/half_sorted_100m.txt')
@@ -62,17 +66,21 @@ inputList.append('largeDatasets/reverse_50m-floats.txt')
 # sortingAlgos=[TimSort, introsort, heap_sort, quickSort, mergeSort,
 #               selectionSort, insertion_sort ,bubble_sort]
 
-# sortingAlgos=[TimSort, introsort]
+# sortingAlgos=[Hybrid_sort_700_run]
+
+# sortingAlgos=[TimSort]
+# sortingAlgos=[introsort]
+# sortingAlgos = [mergeSort]
+sortingAlgos = [bubble_sort]
+
 
 # sortingAlgos=[heap_sort, quickSort]
 
-# sortingAlgos = [mergeSort]
 
 # sortingAlgos = [selectionSort]
 
-sortingAlgos = [insertion_sort]
+# sortingAlgos = [insertion_sort]
 
-sortingAlgos = [bubble_sort]
 
 
 sys.setrecursionlimit(1000000000) # python's default recusion limit is 1000. Need this for quick sort sorted input case
@@ -133,6 +141,10 @@ for algo in sortingAlgos:
                 start = time.time()
                 mergeSort(inputarray, 0, len(inputarray)-1)
                 end = time.time()
+            elif(algo is Hybrid_sort_700_run):
+                start = time.time()
+                Hybrid_sort_700_run(inputarray)
+                end = time.time()
             else:
                 print(f"{algo} is not defined properly")  
             
@@ -140,15 +152,31 @@ for algo in sortingAlgos:
             # print(f"Time taken for {path.split("/")[1]}: {timeTaken:.4f}")
             iterationTimes.append(timeTaken)    
             
-        stdeviation = statistics.stdev(iterationTimes)
-        medianval = statistics.median(iterationTimes)
-        meanval = statistics.mean(iterationTimes)
-        maxval = max(iterationTimes)
-        minval = min(iterationTimes)
+        _std = np.std(iterationTimes)
+        _median = np.median(iterationTimes)
+        _mean = np.mean(iterationTimes)
+        _max = np.max(iterationTimes)
+        _min = np.min(iterationTimes)
 
-        print(f"mean: {meanval:.3f}")
-        print(f"median: {medianval:.3f}")
-        print(f"max: {maxval:.3f}")
-        print(f"min: {minval:.3f}")
-        print(f"std: {stdeviation:.3f}")
+        print("""Execution time summary:
+        {:^12} {:^12} {:^12} {:^12} {:^12}
+        {:^12.4f} {:^12.4f} {:^12.4f} {:^12.4f} {:^12.4f}
+                        """.format(
+                    "mean (ms)",
+                    "median (ms)",
+                    "max (ms)",
+                    "min (ms)",
+                    "std (ms)",
+                _mean * 1000,
+                _median * 1000,
+                _max * 1000,
+                _min * 1000,
+                _std * 1000,
+                    ))
+
+        # print(f"mean: {meanval:.3f}")
+        # print(f"median: {medianval:.3f}")
+        # print(f"max: {maxval:.3f}")
+        # print(f"min: {minval:.3f}")
+        # print(f"std: {stdeviation:.3f}")
             
