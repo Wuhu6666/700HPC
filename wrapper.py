@@ -41,45 +41,21 @@ inputList.append('Sorted/Sorted_100000.txt')
 #50m
 #100m
 
-# inputList.append('largeDatasets/half_sorted_50m.txt')
-# inputList.append('largeDatasets/half_sorted_100m.txt')
-# inputList.append('largeDatasets/random_numbers_50m.txt')
-# inputList.append('largeDatasets/reverse_50m-floats.txt')
+inputList.append('10mills_datasets_gitignored/half_sorted_5m.txt')
+inputList.append('10mills_datasets_gitignored/random_numbers_5m.txt')
+inputList.append('10mills_datasets_gitignored/reverse_5m-float.txt')
+inputList.append('10mills_datasets_gitignored/Sorted_5m.txt')
 
-## try for 100m random, reverse later
+inputList.append('10mills_datasets_gitignored/half_sorted_10m.txt')
+inputList.append('10mills_datasets_gitignored/random_numbers_10m.txt')
+inputList.append('10mills_datasets_gitignored/reverse_10m-float.txt')
+inputList.append('10mills_datasets_gitignored/Sorted_10m.txt')
 
-
-# inputList = ['largeDatasets/half_sorted_50m.txt']
-# inputList.append('largeDatasets/half_sorted_100m.txt')
-# inputList.append('largeDatasets/random_numbers_50m.txt')
-# inputList.append('largeDatasets/reverse_50m-floats.txt')
-# inputList.append('largeDatasets/Sorted_50m.txt')
-# inputList.append('largeDatasets/Sorted_100m.txt')
- 
-# ------------------------------------------------
-# inputList.append('Sorted/Sorted_50000.txt')
-
-# inputList.append('Random/random_numbers_1000.txt')
-# inputList.append('Reversed/reverse_1000-float.txt')
-# inputList.append('Sorted/Sorted_1000.txt')
 
 # sortingAlgos=[TimSort, introsort, heap_sort, quickSort, mergeSort,
 #               selectionSort, insertion_sort ,bubble_sort]
 
-# sortingAlgos=[Hybrid_sort_700_run]
-
-# sortingAlgos=[TimSort]
-# sortingAlgos=[introsort]
-# sortingAlgos = [mergeSort]
-sortingAlgos = [bubble_sort]
-
-
-# sortingAlgos=[heap_sort, quickSort]
-
-
-# sortingAlgos = [selectionSort]
-
-# sortingAlgos = [insertion_sort]
+sortingAlgos=[Hybrid_sort_700_run, TimSort, introsort, mergeSort, bubble_sort]
 
 
 sys.setrecursionlimit(1000000000) # python's default recusion limit is 1000. Need this for quick sort sorted input case

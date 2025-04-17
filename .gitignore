@@ -1,3 +1,6 @@
 __pycache__/*
 largeDatasets/*
 10mills_datasets_gitignored
+*.txt.txt
+*.err
+*.out
