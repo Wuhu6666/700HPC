@@ -1,6 +1,6 @@
 import time
 import sys
-import statistics
+# import statistics
 import numpy as np
 from bubble import bubble_sort
 from introSort import introsort
@@ -14,30 +14,30 @@ from basis import Hybrid_sort_700_run
 
 inputList = ['Half_Sorted/half_sorted_1000.txt']    
 
-# inputList.append('Half_Sorted/half_sorted_5000.txt')
-# inputList.append('Half_Sorted/half_sorted_10000.txt')
-# inputList.append('Half_Sorted/half_sorted_50000.txt')
-# inputList.append('Half_Sorted/half_sorted_100000.txt')
+inputList.append('Half_Sorted/half_sorted_5000.txt')
+inputList.append('Half_Sorted/half_sorted_10000.txt')
+inputList.append('Half_Sorted/half_sorted_50000.txt')
+inputList.append('Half_Sorted/half_sorted_100000.txt')
     
 inputList.append('Random/random_numbers_1000.txt')
 inputList.append('Random/random_numbers_5000.txt')
 inputList.append('Random/random_numbers_10000.txt') 
 inputList.append('Random/random_numbers_50000.txt') 
-# inputList.append('Random/random_numbers_100000.txt')
+inputList.append('Random/random_numbers_100000.txt')
 #100m
 
 inputList.append('Reversed/reverse_1000-float.txt')
 inputList.append('Reversed/reverse_5000-float.txt')
 inputList.append('Reversed/reverse_10000-float.txt')
 inputList.append('Reversed/reverse_50000-float.txt')
-# inputList.append('Reversed/reverse_100000-float.txt')
+inputList.append('Reversed/reverse_100000-float.txt')
 #100m
     
 inputList.append('Sorted/Sorted_1000.txt')
 inputList.append('Sorted/Sorted_5000.txt')
 inputList.append('Sorted/Sorted_10000.txt')
 inputList.append('Sorted/Sorted_50000.txt')
-# inputList.append('Sorted/Sorted_100000.txt')
+inputList.append('Sorted/Sorted_100000.txt')
 #50m
 #100m
 
@@ -82,7 +82,6 @@ sortingAlgos = [bubble_sort]
 # sortingAlgos = [insertion_sort]
 
 
-
 sys.setrecursionlimit(1000000000) # python's default recusion limit is 1000. Need this for quick sort sorted input case
 
 for algo in sortingAlgos:
@@ -92,7 +91,7 @@ for algo in sortingAlgos:
     
     for path in inputList:
         
-        print(f"path: {path.split("/")[1]}")
+        print(f"path: {path.split('/')[1]}")
         iterationTimes=[]
             
         for i in range(1, 100):
@@ -110,41 +109,41 @@ for algo in sortingAlgos:
             # print(inputarray[1:10])
             
             if(algo is quickSort):
-                start = time.time()
+                start = time.perf_counter()
                 quickSort(inputarray, 0, len(inputarray) - 1)
-                end = time.time()
+                end = time.perf_counter()
             elif(algo is heap_sort):
-                start = time.time()
+                start = time.perf_counter()
                 heap_sort(inputarray)
-                end = time.time()
+                end = time.perf_counter()
             elif(algo is introsort):
-                start = time.time()
+                start = time.perf_counter()
                 introsort(inputarray)
-                end = time.time()
+                end = time.perf_counter()
             elif(algo is bubble_sort):
-                start = time.time()
+                start = time.perf_counter()
                 bubble_sort(inputarray)
-                end = time.time()
+                end = time.perf_counter()
             elif(algo is TimSort):
-                start = time.time()
+                start = time.perf_counter()
                 TimSort(inputarray)
-                end = time.time()
+                end = time.perf_counter()
             elif(algo is selectionSort):
-                start = time.time()
+                start = time.perf_counter()
                 selectionSort(inputarray, len(inputarray))
-                end = time.time()
+                end = time.perf_counter()
             elif(algo is insertion_sort):
-                start = time.time()
+                start = time.perf_counter()
                 insertion_sort(inputarray)
-                end = time.time()
+                end = time.perf_counter()
             elif(algo is mergeSort):
-                start = time.time()
+                start = time.perf_counter()
                 mergeSort(inputarray, 0, len(inputarray)-1)
-                end = time.time()
+                end = time.perf_counter()
             elif(algo is Hybrid_sort_700_run):
-                start = time.time()
+                start = time.perf_counter()
                 Hybrid_sort_700_run(inputarray)
-                end = time.time()
+                end = time.perf_counter()
             else:
                 print(f"{algo} is not defined properly")  
             
@@ -174,9 +173,4 @@ for algo in sortingAlgos:
                 _std * 1000,
                     ))
 
-        # print(f"mean: {meanval:.3f}")
-        # print(f"median: {medianval:.3f}")
-        # print(f"max: {maxval:.3f}")
-        # print(f"min: {minval:.3f}")
-        # print(f"std: {stdeviation:.3f}")
             
