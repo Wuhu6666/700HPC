@@ -30,11 +30,7 @@ inputList = [
     '10mills_datasets_gitignored/half_sorted_5m.txt',
     '10mills_datasets_gitignored/random_numbers_5m.txt',
     '10mills_datasets_gitignored/reverse_5m-float.txt',
-    '10mills_datasets_gitignored/Sorted_5m.txt',
-    '10mills_datasets_gitignored/half_sorted_10m.txt',
-    '10mills_datasets_gitignored/random_numbers_10m.txt',
-    '10mills_datasets_gitignored/reverse_10m-float.txt',
-    '10mills_datasets_gitignored/Sorted_10m.txt'
+    '10mills_datasets_gitignored/Sorted_5m.txt'
 ]
 
 sortingAlgos = [Hybrid_sort_700_run, TimSort, introsort, mergeSort, bubble_sort]
@@ -107,7 +103,7 @@ def process_dataset(algo, path, num_iterations=99):
     #     inputarray = [int(line.strip()) for line in lines]
 
     # Parallelize iterations
-    with Pool(processes=16) as pool:
+    with Pool(processes=6) as pool:
         iteration_times = pool.map(
             partial(run_iteration, algo, inputarray),
             range(num_iterations)

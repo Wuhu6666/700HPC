@@ -5,6 +5,54 @@
 
 --------------------------------------------
 
+## submitjob.sh
+
+- sinfo -N -o "%N %P %T %C %m %f %G"
+- sbatch submitjob.sh
+- squeue -u $USER
+
+-----------------------------
+
+- #SBATCH --job-name=sorting_benchmark
+- #SBATCH --partition=intel
+- #SBATCH --nodes=1
+- #SBATCH --ntasks=1
+- #SBATCH --cpus-per-task=16
+- #SBATCH --mem=50G
+- #SBATCH --time=12:00:00
+- #SBATCH --output=sorting_%j.out
+- #SBATCH --error=sorting_%j.err
+- #SBATCH --constraint=del_int_16_256
+- cd /moosefs/home/s265d007/projects/git2/700HPC
+
+------------------------------
+
+- #SBATCH --job-name=sorting_benchmark_g019_r28c4
+- #SBATCH --partition=gpu
+- #SBATCH --nodes=1
+- #SBATCH --ntasks=1
+- #SBATCH --cpus-per-task=6
+- #SBATCH --mem=50G
+- #SBATCH --time=15:00:00
+- #SBATCH --output=sorting_%j.out
+- #SBATCH --error=sorting_%j.err
+- #SBATCH --constraint=r28c4
+- cd /moosefs/home/s265d007/projects/git/700HPC
+
+----------------------------------------------
+
+- #SBATCH --job-name=sorting_benchmark_g016_gpu_32cores_delint16128
+- #SBATCH --partition=gpu
+- #SBATCH --nodes=1
+- #SBATCH --ntasks=1
+- #SBATCH --cpus-per-task=32
+- #SBATCH --mem=120G
+- #SBATCH --time=12:00:00
+- #SBATCH --output=sorting_%j.out
+- #SBATCH --error=sorting_%j.err
+- #SBATCH --constraint=del_int_16_128
+
+
 ## TimSort times: 
 
 - Time taken for half_sorted_1000.txt: 0.0008
