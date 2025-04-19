@@ -13,20 +13,48 @@
 
 -----------------------------
 
-- #SBATCH --job-name=sorting_benchmark
-- #SBATCH --partition=intel
+## tobe saved as : sorting_g020_gpu_6cores_gpu_4GHz_1.out(154796) (hybrid th 10)
+- #SBATCH --job-name=sorting_benchmark_g020_gpu_1
+- #SBATCH --partition=gpu
 - #SBATCH --nodes=1
 - #SBATCH --ntasks=1
-- #SBATCH --cpus-per-task=16
+- #SBATCH --cpus-per-task=6
 - #SBATCH --mem=50G
-- #SBATCH --time=12:00:00
+- #SBATCH --time=23:00:00
 - #SBATCH --output=sorting_%j.out
 - #SBATCH --error=sorting_%j.err
-- #SBATCH --constraint=del_int_16_256
-- cd /moosefs/home/s265d007/projects/git2/700HPC
+- #SBATCH --constraint=gpu,eth_1g,r28c1,asu_int_6_64
+
+
+### tobe saved as: sorting_g016_gpu_32cores_gpu_3GHz_1.out(154795) (hybrid th 32)
+- #SBATCH --job-name=sorting_benchmark_g016_gpu_32cores_gpu_1
+- #SBATCH --partition=gpu
+- #SBATCH --nodes=1
+- #SBATCH --ntasks=1
+- #SBATCH --cpus-per-task=32
+- #SBATCH --mem=60G
+- #SBATCH --time=23:00:00
+- #SBATCH --output=sorting_%j.out
+- #SBATCH --error=sorting_%j.err
+- #SBATCH --constraint=gpu,eth_10g,r27c1
+
+
+
+### tobe saved as: sorting_g019_6cores_gpu_4GHz_1.out (154794) (hybrid th 32)
+- #SBATCH --job-name=sorting_benchmark_g019_gpu_1
+- #SBATCH --partition=gpu
+- #SBATCH --nodes=1
+- #SBATCH --ntasks=1
+- #SBATCH --cpus-per-task=6
+- #SBATCH --mem=50G
+- #SBATCH --time=23:00:00
+- #SBATCH --output=sorting_%j.out
+- #SBATCH --error=sorting_%j.err
+- #SBATCH --constraint=gpu,eth_1g,r28c4
 
 ------------------------------
 
+### sorting_g019_6cores_r28c4.out
 - #SBATCH --job-name=sorting_benchmark_g019_r28c4
 - #SBATCH --partition=gpu
 - #SBATCH --nodes=1
@@ -41,6 +69,7 @@
 
 ----------------------------------------------
 
+### sorting_g016_32cores_delint16128.out
 - #SBATCH --job-name=sorting_benchmark_g016_gpu_32cores_delint16128
 - #SBATCH --partition=gpu
 - #SBATCH --nodes=1

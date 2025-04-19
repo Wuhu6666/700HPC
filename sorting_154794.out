@@ -1,0 +1,588 @@
+--------------------------------------------
+Hybrid_sort_700_run times: 
+Processing Hybrid_sort_700_run on Half_Sorted/half_sorted_1000.txt
+path: half_sorted_1000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+       3.1166       3.1372       3.3032       2.9735       0.0696   
+    
+Processing Hybrid_sort_700_run on Half_Sorted/half_sorted_5000.txt
+path: half_sorted_5000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      18.1777      17.9570      19.7383      16.9341       0.7352   
+    
+Processing Hybrid_sort_700_run on Half_Sorted/half_sorted_10000.txt
+path: half_sorted_10000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      38.4382      38.3265      41.5960      36.2668       1.3407   
+    
+Processing Hybrid_sort_700_run on Half_Sorted/half_sorted_50000.txt
+path: half_sorted_50000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      229.4116     231.9629     241.3736     209.8481      7.0957   
+    
+Processing Hybrid_sort_700_run on Half_Sorted/half_sorted_100000.txt
+path: half_sorted_100000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      501.2060     505.0562     526.2334     446.9065     15.1412   
+    
+Processing Hybrid_sort_700_run on Random/random_numbers_1000.txt
+path: random_numbers_1000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+       3.3827       3.3282      10.7923       3.1456       0.7517   
+    
+Processing Hybrid_sort_700_run on Random/random_numbers_5000.txt
+path: random_numbers_5000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      19.5040      19.2489      20.7469      18.2700       0.7112   
+    
+Processing Hybrid_sort_700_run on Random/random_numbers_10000.txt
+path: random_numbers_10000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      40.9338      40.8571      45.7913      38.6926       1.4011   
+    
+Processing Hybrid_sort_700_run on Random/random_numbers_50000.txt
+path: random_numbers_50000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      246.4977     249.5285     260.1094     223.1587      8.4396   
+    
+Processing Hybrid_sort_700_run on Random/random_numbers_100000.txt
+path: random_numbers_100000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      542.7545     549.0373     574.3441     488.3312     18.2418   
+    
+Processing Hybrid_sort_700_run on Reversed/reverse_1000-float.txt
+path: reverse_1000-float.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+       3.6626       3.6840       3.8979       3.4890       0.0876   
+    
+Processing Hybrid_sort_700_run on Reversed/reverse_5000-float.txt
+path: reverse_5000-float.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      20.4690      20.3988      23.5145      19.2870       0.6640   
+    
+Processing Hybrid_sort_700_run on Reversed/reverse_10000-float.txt
+path: reverse_10000-float.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      40.3863      40.5068      42.2804      38.3669       1.0652   
+    
+Processing Hybrid_sort_700_run on Reversed/reverse_50000-float.txt
+path: reverse_50000-float.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      222.0612     223.8642     233.5835     209.2922      5.4517   
+    
+Processing Hybrid_sort_700_run on Reversed/reverse_100000-float.txt
+path: reverse_100000-float.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      464.7139     467.4533     526.2489     433.9803     14.4711   
+    
+Processing Hybrid_sort_700_run on Sorted/Sorted_1000.txt
+path: Sorted_1000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+       2.7381       2.7520       2.9222       2.6060       0.0666   
+    
+Processing Hybrid_sort_700_run on Sorted/Sorted_5000.txt
+path: Sorted_5000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      42.8673      42.9267      53.6647      40.6179       1.5272   
+    
+Processing Hybrid_sort_700_run on Sorted/Sorted_10000.txt
+path: Sorted_10000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      192.8321     193.2696     213.2382     183.3389      4.9630   
+    
+Processing Hybrid_sort_700_run on Sorted/Sorted_50000.txt
+path: Sorted_50000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+     3744.5363    3781.3196    3901.1021    3575.6798     80.8476   
+    
+Processing Hybrid_sort_700_run on Sorted/Sorted_100000.txt
+path: Sorted_100000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+     18092.7650   18241.6205   18453.8205   17179.9717    378.0713  
+    
+Processing Hybrid_sort_700_run on 10mills_datasets_gitignored/half_sorted_5m.txt
+path: half_sorted_5m.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+     36144.8748   36414.2042   37501.2017   33575.2273    850.2160  
+    
+Processing Hybrid_sort_700_run on 10mills_datasets_gitignored/random_numbers_5m.txt
+path: random_numbers_5m.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+     41849.7772   42172.8197   43580.9121   38063.8601    984.7445  
+    
+Processing Hybrid_sort_700_run on 10mills_datasets_gitignored/reverse_5m-float.txt
+path: reverse_5m-float.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+     29475.0062   29646.7896   30789.6689   27688.2859    688.8462  
+    
+--------------------------------------------
+TimSort times: 
+Processing TimSort on Half_Sorted/half_sorted_1000.txt
+path: half_sorted_1000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+       1.9104       1.9111       2.2910       1.8082       0.0765   
+    
+Processing TimSort on Half_Sorted/half_sorted_5000.txt
+path: half_sorted_5000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      12.3540      12.0955      22.1346      11.4660       1.2369   
+    
+Processing TimSort on Half_Sorted/half_sorted_10000.txt
+path: half_sorted_10000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      25.7890      26.0076      26.3684      24.7106       0.4974   
+    
+Processing TimSort on Half_Sorted/half_sorted_50000.txt
+path: half_sorted_50000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      157.7041     158.6480     172.9077     145.7750      5.0463   
+    
+Processing TimSort on Half_Sorted/half_sorted_100000.txt
+path: half_sorted_100000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      349.4452     352.6321     369.6034     315.7538     11.0880   
+    
+Processing TimSort on Random/random_numbers_1000.txt
+path: random_numbers_1000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+       2.1294       2.1296       2.3935       2.0125       0.0743   
+    
+Processing TimSort on Random/random_numbers_5000.txt
+path: random_numbers_5000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      13.5659      13.6246      14.3160      12.9231       0.3015   
+    
+Processing TimSort on Random/random_numbers_10000.txt
+path: random_numbers_10000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      28.8805      29.0604      29.6512      27.5976       0.6369   
+    
+Processing TimSort on Random/random_numbers_50000.txt
+path: random_numbers_50000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      176.2905     177.5626     190.2429     161.7433      5.6855   
+    
+Processing TimSort on Random/random_numbers_100000.txt
+path: random_numbers_100000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      393.7422     399.2643     414.6013     353.8975     13.8925   
+    
+Processing TimSort on Reversed/reverse_1000-float.txt
+path: reverse_1000-float.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+       3.1065       2.9866      12.7301       2.8219       0.9838   
+    
+Processing TimSort on Reversed/reverse_5000-float.txt
+path: reverse_5000-float.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      17.5185      17.6065      18.2115      16.7799       0.3856   
+    
+Processing TimSort on Reversed/reverse_10000-float.txt
+path: reverse_10000-float.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      36.2565      36.3927      37.1561      34.4433       0.6425   
+    
+Processing TimSort on Reversed/reverse_50000-float.txt
+path: reverse_50000-float.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      201.7471     203.0296     206.3690     192.6047      3.9383   
+    
+Processing TimSort on Reversed/reverse_100000-float.txt
+path: reverse_100000-float.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      420.6236     424.9430     433.9317     399.9777      9.5878   
+    
+Processing TimSort on Sorted/Sorted_1000.txt
+path: Sorted_1000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+       0.9786       0.9772       1.0973       0.9212       0.0359   
+    
+Processing TimSort on Sorted/Sorted_5000.txt
+path: Sorted_5000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+       6.9251       6.8301       7.6991       6.4687       0.3183   
+    
+Processing TimSort on Sorted/Sorted_10000.txt
+path: Sorted_10000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      15.1881      15.2622      15.6563      14.4490       0.3820   
+    
+Processing TimSort on Sorted/Sorted_50000.txt
+path: Sorted_50000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      95.7492      95.9498      101.8535     90.7190       2.0525   
+    
+Processing TimSort on Sorted/Sorted_100000.txt
+path: Sorted_100000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      208.2110     209.4944     220.8892     194.7847      4.8897   
+    
+Processing TimSort on 10mills_datasets_gitignored/half_sorted_5m.txt
+path: half_sorted_5m.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+     26361.7282   26557.7130   27588.8159   24302.2634    635.7676  
+    
+Processing TimSort on 10mills_datasets_gitignored/random_numbers_5m.txt
+path: random_numbers_5m.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+     32673.5525   32920.6530   34660.0195   29376.1982   1016.4203  
+    
+Processing TimSort on 10mills_datasets_gitignored/reverse_5m-float.txt
+path: reverse_5m-float.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+     25894.0103   26055.3093   26783.0701   24587.4785    565.3194  
+    
+--------------------------------------------
+introsort times: 
+Processing introsort on Half_Sorted/half_sorted_1000.txt
+path: half_sorted_1000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+       2.1108       2.0058      12.0057       1.9087       1.0048   
+    
+Processing introsort on Half_Sorted/half_sorted_5000.txt
+path: half_sorted_5000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      11.4130      11.3849      21.3878      10.7873       1.0394   
+    
+Processing introsort on Half_Sorted/half_sorted_10000.txt
+path: half_sorted_10000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      24.6293      24.8545      25.1391      23.5496       0.5308   
+    
+Processing introsort on Half_Sorted/half_sorted_50000.txt
+path: half_sorted_50000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      141.8593     142.7119     151.2773     134.7255      3.3065   
+    
+Processing introsort on Half_Sorted/half_sorted_100000.txt
+path: half_sorted_100000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      309.5170     312.9583     320.7994     289.0603      7.6966   
+    
+Processing introsort on Random/random_numbers_1000.txt
+path: random_numbers_1000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+       1.8266       1.8073       4.3875       1.7098       0.2632   
+    
+Processing introsort on Random/random_numbers_5000.txt
+path: random_numbers_5000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      12.0673      12.1522      12.3858      11.5114       0.2746   
+    
+Processing introsort on Random/random_numbers_10000.txt
+path: random_numbers_10000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      23.0800      23.3024      23.5504      22.0789       0.4878   
+    
+Processing introsort on Random/random_numbers_50000.txt
+path: random_numbers_50000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      139.9434     140.9035     152.1808     132.0091      3.4351   
+    
+Processing introsort on Random/random_numbers_100000.txt
+path: random_numbers_100000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      298.5169     300.6852     316.0920     276.8033      7.8486   
+    
+Processing introsort on Reversed/reverse_1000-float.txt
+path: reverse_1000-float.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+       4.2572       4.1766      10.4643       3.9474       0.7637   
+    
+Processing introsort on Reversed/reverse_5000-float.txt
+path: reverse_5000-float.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      35.4963      35.7919      36.2750      33.8982       0.7568   
+    
+Processing introsort on Reversed/reverse_10000-float.txt
+path: reverse_10000-float.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      77.9142      78.5231      83.1458      74.1973       1.8462   
+    
+Processing introsort on Reversed/reverse_50000-float.txt
+path: reverse_50000-float.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      524.6433     530.0153     537.0968     500.5603     11.5395   
+    
+Processing introsort on Reversed/reverse_100000-float.txt
+path: reverse_100000-float.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+     1245.2724    1255.9873    1281.7873    1186.9213     28.3419   
+    
+Processing introsort on Sorted/Sorted_1000.txt
+path: Sorted_1000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+       7.2243       7.0978      17.0983       6.7278       1.1231   
+    
+Processing introsort on Sorted/Sorted_5000.txt
+path: Sorted_5000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      28.5037      28.7527      29.3287      27.2604       0.5916   
+    
+Processing introsort on Sorted/Sorted_10000.txt
+path: Sorted_10000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      108.9176     110.0137     112.3444     103.9067      2.4778   
+    
+Processing introsort on Sorted/Sorted_50000.txt
+path: Sorted_50000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      447.7154     450.8846     460.6286     429.7875      8.6874   
+    
+Processing introsort on Sorted/Sorted_100000.txt
+path: Sorted_100000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+     1444.2645    1456.9730    1478.1610    1370.8336     31.8529   
+    
+Processing introsort on 10mills_datasets_gitignored/half_sorted_5m.txt
+path: half_sorted_5m.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+     22743.4038   22934.0961   23988.6321   20335.7184    690.6513  
+    
+Processing introsort on 10mills_datasets_gitignored/random_numbers_5m.txt
+path: random_numbers_5m.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+     23291.6918   23530.6922   24868.4181   20279.4923    781.4895  
+    
+Processing introsort on 10mills_datasets_gitignored/reverse_5m-float.txt
+path: reverse_5m-float.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+     74415.4622   75067.2505   76065.6559   70826.9802   1565.1475  
+    
+--------------------------------------------
+mergeSort times: 
+Processing mergeSort on Half_Sorted/half_sorted_1000.txt
+path: half_sorted_1000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+       3.5697       3.4318      13.4318       3.2440       1.0745   
+    
+Processing mergeSort on Half_Sorted/half_sorted_5000.txt
+path: half_sorted_5000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      20.4774      20.6151      23.1946      19.5424       0.5328   
+    
+Processing mergeSort on Half_Sorted/half_sorted_10000.txt
+path: half_sorted_10000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      44.3271      44.2074      53.4229      41.9180       1.5534   
+    
+Processing mergeSort on Half_Sorted/half_sorted_50000.txt
+path: half_sorted_50000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      254.6028     257.0956     262.6675     241.3849      6.2460   
+    
+Processing mergeSort on Half_Sorted/half_sorted_100000.txt
+path: half_sorted_100000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      548.6966     555.4827     571.6885     514.6690     14.7656   
+    
+Processing mergeSort on Random/random_numbers_1000.txt
+path: random_numbers_1000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+       3.4387       3.4466       4.4301       3.2644       0.1256   
+    
+Processing mergeSort on Random/random_numbers_5000.txt
+path: random_numbers_5000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      20.6684      20.8271      21.2640      19.8372       0.4035   
+    
+Processing mergeSort on Random/random_numbers_10000.txt
+path: random_numbers_10000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      44.3287      44.6638      46.6153      42.4753       0.9078   
+    
+Processing mergeSort on Random/random_numbers_50000.txt
+path: random_numbers_50000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      260.9846     262.9389     281.1411     246.2545      6.8630   
+    
+Processing mergeSort on Random/random_numbers_100000.txt
+path: random_numbers_100000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      566.5756     570.1069     602.0514     525.9341     17.0773   
+    
+Processing mergeSort on Reversed/reverse_1000-float.txt
+path: reverse_1000-float.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+       3.1914       3.1562       8.3435       2.9920       0.5261   
+    
+Processing mergeSort on Reversed/reverse_5000-float.txt
+path: reverse_5000-float.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      18.4600      18.6292      18.8215      17.6757       0.3898   
+    
+Processing mergeSort on Reversed/reverse_10000-float.txt
+path: reverse_10000-float.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      39.3874      39.7436      42.0526      37.7091       0.8509   
+    
+Processing mergeSort on Reversed/reverse_50000-float.txt
+path: reverse_50000-float.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      224.2316     225.8389     232.1906     214.0819      5.2064   
+    
+Processing mergeSort on Reversed/reverse_100000-float.txt
+path: reverse_100000-float.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      472.8493     475.9003     487.4058     452.4878     10.3263   
+    
+Processing mergeSort on Sorted/Sorted_1000.txt
+path: Sorted_1000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+       3.2843       3.2055       5.8311       3.0268       0.4814   
+    
+Processing mergeSort on Sorted/Sorted_5000.txt
+path: Sorted_5000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      18.8692      19.0424      19.2088      17.9978       0.4213   
+    
+Processing mergeSort on Sorted/Sorted_10000.txt
+path: Sorted_10000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      40.2395      40.5766      41.6745      38.6027       0.7962   
+    
+Processing mergeSort on Sorted/Sorted_50000.txt
+path: Sorted_50000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      228.4298     230.5385     248.1912     218.5130      5.2029   
+    
+Processing mergeSort on Sorted/Sorted_100000.txt
+path: Sorted_100000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      481.6346     484.9126     497.9342     459.7602     10.5171   
+    
+Processing mergeSort on 10mills_datasets_gitignored/half_sorted_5m.txt
+path: half_sorted_5m.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+     39414.8354   39798.9132   40843.9391   36056.2970   1007.2014  
+    
+Processing mergeSort on 10mills_datasets_gitignored/random_numbers_5m.txt
+path: random_numbers_5m.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+     45232.7861   45699.4543   46887.2676   41403.8442   1168.5591  
+    
+Processing mergeSort on 10mills_datasets_gitignored/reverse_5m-float.txt
+path: reverse_5m-float.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+     30426.2678   30674.2970   31338.3569   29002.7860    646.0082  
+    
+--------------------------------------------
+bubble_sort times: 
+Processing bubble_sort on Half_Sorted/half_sorted_1000.txt
+path: half_sorted_1000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      67.5327      68.1275      72.2624      64.5575       1.5286   
+    
+Processing bubble_sort on Half_Sorted/half_sorted_5000.txt
+path: half_sorted_5000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+     1974.8715    1990.5501    2013.9961    1889.7640     40.1889   
+    
+Processing bubble_sort on Half_Sorted/half_sorted_10000.txt
+path: half_sorted_10000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+     7385.2748    7441.5321    7501.4257    7118.7399     127.5312  
+    
+Processing bubble_sort on Half_Sorted/half_sorted_50000.txt
+path: half_sorted_50000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+    210096.6301  212565.9517  215315.7858  194817.6602   5404.4971  
+    
+Processing bubble_sort on Half_Sorted/half_sorted_100000.txt
+path: half_sorted_100000.txt

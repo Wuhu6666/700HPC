@@ -1,0 +1,142 @@
+--------------------------------------------
+Hybrid_sort_700_run times: 
+Processing Hybrid_sort_700_run on Half_Sorted/half_sorted_1000.txt
+path: half_sorted_1000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+       6.5701       7.1554       8.2765       3.5685       1.2458   
+    
+Processing Hybrid_sort_700_run on Half_Sorted/half_sorted_5000.txt
+path: half_sorted_5000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      41.7773      44.3557      51.3570      21.7111       6.6530   
+    
+Processing Hybrid_sort_700_run on Half_Sorted/half_sorted_10000.txt
+path: half_sorted_10000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      91.3703      91.8019      110.0086     56.0488      10.3327   
+    
+Processing Hybrid_sort_700_run on Half_Sorted/half_sorted_50000.txt
+path: half_sorted_50000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      543.7448     561.2334     622.6729     311.5349     57.1215   
+    
+Processing Hybrid_sort_700_run on Half_Sorted/half_sorted_100000.txt
+path: half_sorted_100000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+     1181.8752    1228.9464    1335.0716     717.2162     117.8869  
+    
+Processing Hybrid_sort_700_run on Random/random_numbers_1000.txt
+path: random_numbers_1000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+       6.9874       7.5759      12.3717       3.6096       1.3728   
+    
+Processing Hybrid_sort_700_run on Random/random_numbers_5000.txt
+path: random_numbers_5000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      44.9552      46.7448      52.5158      25.1182       6.1184   
+    
+Processing Hybrid_sort_700_run on Random/random_numbers_10000.txt
+path: random_numbers_10000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      92.4341      95.3637      107.4682     55.5007      11.1454   
+    
+Processing Hybrid_sort_700_run on Random/random_numbers_50000.txt
+path: random_numbers_50000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      569.3963     590.8353     636.8986     359.4794     52.6473   
+    
+Processing Hybrid_sort_700_run on Random/random_numbers_100000.txt
+path: random_numbers_100000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+     1232.0921    1278.9827    1393.8256     724.6303     134.2541  
+    
+Processing Hybrid_sort_700_run on Reversed/reverse_1000-float.txt
+path: reverse_1000-float.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+       5.6855       6.1051       7.0470       3.2431       1.2302   
+    
+Processing Hybrid_sort_700_run on Reversed/reverse_5000-float.txt
+path: reverse_5000-float.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      34.0311      35.1819      40.3489      19.6066       4.6013   
+    
+Processing Hybrid_sort_700_run on Reversed/reverse_10000-float.txt
+path: reverse_10000-float.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      71.0436      72.5304      83.5983      36.6473       8.7699   
+    
+Processing Hybrid_sort_700_run on Reversed/reverse_50000-float.txt
+path: reverse_50000-float.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      423.9253     443.1060     498.8436     216.5295     53.9743   
+    
+Processing Hybrid_sort_700_run on Reversed/reverse_100000-float.txt
+path: reverse_100000-float.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      755.6061     776.0365     970.1320     391.0094     143.5416  
+    
+Processing Hybrid_sort_700_run on Sorted/Sorted_1000.txt
+path: Sorted_1000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      22.7037      23.6394      36.7307      11.5954       2.8451   
+    
+Processing Hybrid_sort_700_run on Sorted/Sorted_5000.txt
+path: Sorted_5000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+      412.2108     420.6321     433.7549     158.7553     44.3054   
+    
+Processing Hybrid_sort_700_run on Sorted/Sorted_10000.txt
+path: Sorted_10000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+     1939.9485    1978.2970    2278.0473     696.7540     199.8694  
+    
+Processing Hybrid_sort_700_run on Sorted/Sorted_50000.txt
+path: Sorted_50000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+     39347.5488   40039.9265   42032.0125   13478.6710   4443.4511  
+    
+Processing Hybrid_sort_700_run on Sorted/Sorted_100000.txt
+path: Sorted_100000.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+    190783.8587  194379.5005  200232.8072   65101.0420   21850.2957 
+    
+Processing Hybrid_sort_700_run on 10mills_datasets_gitignored/half_sorted_5m.txt
+path: half_sorted_5m.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+     83575.5078   90232.1627   95751.2804   54916.3774   11779.2703 
+    
+Processing Hybrid_sort_700_run on 10mills_datasets_gitignored/random_numbers_5m.txt
+path: random_numbers_5m.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+     90880.1727   96975.9246  105568.2729   56226.8542   10895.2285 
+    
+Processing Hybrid_sort_700_run on 10mills_datasets_gitignored/reverse_5m-float.txt
+path: reverse_5m-float.txt
+Execution time summary:
+     mean (ms)   median (ms)    max (ms)     min (ms)     std (ms)  
+     49792.3670   51332.1765   62880.8949   30128.5626   9212.0773  
+    
+Processing Hybrid_sort_700_run on 10mills_datasets_gitignored/Sorted_5m.txt
+path: Sorted_5m.txt

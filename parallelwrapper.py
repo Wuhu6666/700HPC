@@ -29,9 +29,9 @@ inputList = [
     'Sorted/Sorted_100000.txt',
     '10mills_datasets_gitignored/half_sorted_5m.txt',
     '10mills_datasets_gitignored/random_numbers_5m.txt',
-    '10mills_datasets_gitignored/reverse_5m-float.txt',
-    '10mills_datasets_gitignored/Sorted_5m.txt'
+    '10mills_datasets_gitignored/reverse_5m-float.txt'
 ]
+# '10mills_datasets_gitignored/Sorted_5m.txt'
 
 sortingAlgos = [Hybrid_sort_700_run, TimSort, introsort, mergeSort, bubble_sort]
 
@@ -82,28 +82,21 @@ def run_iteration(algo, inputarray, iteration):
     return end - start
 
 def process_dataset(algo, path, num_iterations=99):
-    """Process a single dataset with the given algorithm."""
+
     print(f"Processing {algo.__name__} on {path}")
 
-    try:
-        print(f"path: {path.split('/')[1]}")
-    except IndexError:
-        print(f"Error: Path {path} does not have enough segments")
+    # try:
+    #     print(f"path: {path.split('/')[1]}")
+    # except IndexError:
+    #     print(f"Error: Path {path} does not have enough segments")
 
-    # Read dataset once
     with open(path, 'r') as fin:
         lines = fin.readlines()
 
     inputarray = [line for line in lines]
 
-    # # Convert to appropriate type
-    # if "float" in path or "Sorted/Sorted" in path:
-    #     inputarray = [float(line.strip()) for line in lines]
-    # else:
-    #     inputarray = [int(line.strip()) for line in lines]
-
-    # Parallelize iterations
-    with Pool(processes=6) as pool:
+    # Parallelize iterations    
+    with Pool(processes=32) as pool:
         iteration_times = pool.map(
             partial(run_iteration, algo, inputarray),
             range(num_iterations)
@@ -123,16 +116,6 @@ def process_dataset(algo, path, num_iterations=99):
         "mean (ms)", "median (ms)", "max (ms)", "min (ms)", "std (ms)",
         _mean * 1000, _median * 1000, _max * 1000, _min * 1000, _std * 1000
     ))
-
-    # Save results to file
-    with open(f"results_{algo.__name__}_{path.split('/')[-1]}.txt", "w") as f:
-        f.write("""Execution time summary:
-        {:^12} {:^12} {:^12} {:^12} {:^12}
-        {:^12.4f} {:^12.4f} {:^12.4f} {:^12.4f} {:^12.4f}
-        """.format(
-            "mean (ms)", "median (ms)", "max (ms)", "min (ms)", "std (ms)",
-            _mean * 1000, _median * 1000, _max * 1000, _min * 1000, _std * 1000
-        ))
 
 if __name__ == "__main__":
     for algo in sortingAlgos:

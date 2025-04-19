@@ -124,7 +124,7 @@ def detect_run_fixed(arr, start, threshold):
         end = min(start + threshold, n)
         return arr[start:end], end
 
-def Hybrid_sort_700_run(arr, threshold=32):
+def Hybrid_sort_700_run(arr, threshold=10):
     n = len(arr)
     if n <= threshold:
         return bubble_early_stop(arr)
