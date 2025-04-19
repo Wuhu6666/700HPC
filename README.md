@@ -26,7 +26,7 @@
 - #SBATCH --constraint=gpu,eth_1g,r28c1,asu_int_6_64
 
 
-### Saved as: sorting_g016_gpu_32cores_gpu_3GHz.out (hybrid th 32) (almost all results except 5m by bubble sort)(Best config for our use case)
+### Saved as: sorting_g016_gpu_32cores_gpu_3GHz_best_th32.out (hybrid th 32) (almost all results except 5m by bubble sort)(Best config for our use case)
 - #SBATCH --job-name=sorting_benchmark_g016_gpu_32cores_gpu_1
 - #SBATCH --partition=gpu
 - #SBATCH --nodes=1
