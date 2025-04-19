@@ -13,7 +13,7 @@
 
 -----------------------------
 
-## tobe saved as : sorting_g020_gpu_6cores_gpu_4GHz_1.out(154796) (hybrid th 10)
+## tobe saved as : sorting_g020_gpu_6cores_gpu_4GHz.out(154796) (hybrid th 10) (incomplete bubble sort)
 - #SBATCH --job-name=sorting_benchmark_g020_gpu_1
 - #SBATCH --partition=gpu
 - #SBATCH --nodes=1
@@ -26,7 +26,7 @@
 - #SBATCH --constraint=gpu,eth_1g,r28c1,asu_int_6_64
 
 
-### tobe saved as: sorting_g016_gpu_32cores_gpu_3GHz_1.out(154795) (hybrid th 32)
+### Saved as: sorting_g016_gpu_32cores_gpu_3GHz.out (hybrid th 32) (almost all results except 5m by bubble sort)(Best config for our use case)
 - #SBATCH --job-name=sorting_benchmark_g016_gpu_32cores_gpu_1
 - #SBATCH --partition=gpu
 - #SBATCH --nodes=1
@@ -39,8 +39,7 @@
 - #SBATCH --constraint=gpu,eth_10g,r27c1
 
 
-
-### tobe saved as: sorting_g019_6cores_gpu_4GHz_1.out (154794) (hybrid th 32)
+### tobe saved as: sorting_g019_6cores_gpu_4GHz.out (hybrid th 32) (incomplete bubble sort)
 - #SBATCH --job-name=sorting_benchmark_g019_gpu_1
 - #SBATCH --partition=gpu
 - #SBATCH --nodes=1
