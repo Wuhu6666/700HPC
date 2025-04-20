@@ -42,9 +42,10 @@ inputList = [
     'Sorted_New/Sorted_100000.txt'
 ]
 
-sortingAlgos = [Hybrid_sort_700_run_sorted,tim_run_detect_sorted,mergeSort,introsort]
+# sortingAlgos = [Hybrid_sort_700_run_sorted,tim_run_detect_sorted,mergeSort,introsort, bubble_sort]
+sortingAlgos = [bubble_sort]
 
-output_csv = 'sorting_results.csv'
+output_csv = 'sorting_results_bubble.csv'
 os.makedirs("sorted_outputs", exist_ok=True)
 
 if os.path.exists(output_csv):

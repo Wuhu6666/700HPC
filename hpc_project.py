@@ -141,7 +141,7 @@ def Hybrid_sort_700_run(arr, threshold=32):
 def is_sorted(arr):
     return all(arr[i] <= arr[i+1] for i in range(len(arr)-1))
 
-def Hybrid_sort_700_run_sorted(arr, threshold=32):
+def Hybrid_sort_700_run_sorted(arr, threshold=10):
     n = len(arr)
 
     if is_sorted(arr):
