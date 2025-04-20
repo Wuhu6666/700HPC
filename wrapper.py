@@ -1,7 +1,8 @@
-import time
+import time 
 import sys
-# import statistics
 import numpy as np
+import csv
+import os
 from bubble import bubble_sort
 from introSort import introsort
 from heapSort import heap_sort
@@ -10,143 +11,120 @@ from timSort import TimSort
 from selectionSort import selectionSort
 from insertionSort import insertion_sort
 from mergeSort import mergeSort
-from basis import Hybrid_sort_700_run
+from hpc_project import tim_run_detect_sorted
+from hpc_project import Hybrid_sort_700_run_sorted
 
-inputList = ['Half_Sorted/half_sorted_1000.txt']    
+sys.setrecursionlimit(1000000000)
 
-inputList.append('Half_Sorted/half_sorted_5000.txt')
-inputList.append('Half_Sorted/half_sorted_10000.txt')
-inputList.append('Half_Sorted/half_sorted_50000.txt')
-inputList.append('Half_Sorted/half_sorted_100000.txt')
-    
-inputList.append('Random/random_numbers_1000.txt')
-inputList.append('Random/random_numbers_5000.txt')
-inputList.append('Random/random_numbers_10000.txt') 
-inputList.append('Random/random_numbers_50000.txt') 
-inputList.append('Random/random_numbers_100000.txt')
-#100m
+def is_sorted(arr):
+    return all(arr[i] <= arr[i + 1] for i in range(len(arr) - 1))
 
-inputList.append('Reversed/reverse_1000-float.txt')
-inputList.append('Reversed/reverse_5000-float.txt')
-inputList.append('Reversed/reverse_10000-float.txt')
-inputList.append('Reversed/reverse_50000-float.txt')
-inputList.append('Reversed/reverse_100000-float.txt')
-#100m
-    
-inputList.append('Sorted/Sorted_1000.txt')
-inputList.append('Sorted/Sorted_5000.txt')
-inputList.append('Sorted/Sorted_10000.txt')
-inputList.append('Sorted/Sorted_50000.txt')
-inputList.append('Sorted/Sorted_100000.txt')
-#50m
-#100m
+inputList = [
+    'Half_Sorted/half_sorted_1000.txt',
+    'Half_Sorted/half_sorted_5000.txt',
+    'Half_Sorted/half_sorted_10000.txt',
+    'Half_Sorted/half_sorted_50000.txt',
+    'Half_Sorted/half_sorted_100000.txt',
+    'Random/random_numbers_1000.txt',
+    'Random/random_numbers_5000.txt',
+    'Random/random_numbers_10000.txt',
+    'Random/random_numbers_50000.txt',
+    'Random/random_numbers_100000.txt',
+    'Reversed_New/reverse_1000.txt',
+    'Reversed_New/reverse_5000.txt',
+    'Reversed_New/reverse_10000.txt',
+    'Reversed_New/reverse_50000.txt',
+    'Reversed_New/reverse_100000.txt',
+    'Sorted_New/Sorted_1000.txt',
+    'Sorted_New/Sorted_5000.txt',
+    'Sorted_New/Sorted_10000.txt',
+    'Sorted_New/Sorted_50000.txt',
+    'Sorted_New/Sorted_100000.txt'
+]
 
-inputList.append('10mills_datasets_gitignored/half_sorted_5m.txt')
-inputList.append('10mills_datasets_gitignored/random_numbers_5m.txt')
-inputList.append('10mills_datasets_gitignored/reverse_5m-float.txt')
-inputList.append('10mills_datasets_gitignored/Sorted_5m.txt')
+sortingAlgos = [Hybrid_sort_700_run_sorted,tim_run_detect_sorted,mergeSort,introsort]
 
-inputList.append('10mills_datasets_gitignored/half_sorted_10m.txt')
-inputList.append('10mills_datasets_gitignored/random_numbers_10m.txt')
-inputList.append('10mills_datasets_gitignored/reverse_10m-float.txt')
-inputList.append('10mills_datasets_gitignored/Sorted_10m.txt')
+output_csv = 'sorting_results.csv'
+os.makedirs("sorted_outputs", exist_ok=True)
 
+if os.path.exists(output_csv):
+    os.remove(output_csv)
 
-# sortingAlgos=[TimSort, introsort, heap_sort, quickSort, mergeSort,
-#               selectionSort, insertion_sort ,bubble_sort]
-
-sortingAlgos=[Hybrid_sort_700_run, TimSort, introsort, mergeSort, bubble_sort]
-
-
-sys.setrecursionlimit(1000000000) # python's default recusion limit is 1000. Need this for quick sort sorted input case
+with open(output_csv, mode='w', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerow(["Algorithm", "Dataset", "Mean(ms)", "Median(ms)", "Max(ms)", "Min(ms)", "Std(ms)"])
 
 for algo in sortingAlgos:
-        
-    print("--------------------------------------------")
-    print(f"{algo.__name__} times: ")
-    
+    algo_name = algo.__name__
+    algo_output_dir = os.path.join("sorted_outputs", algo_name)
+    os.makedirs(algo_output_dir, exist_ok=True)
+
+    print(f"\nRunning algorithm {algo_name}")
+
     for path in inputList:
-        
-        print(f"path: {path.split('/')[1]}")
-        iterationTimes=[]
-            
+        top_folder = os.path.basename(os.path.dirname(path)).replace("_New", "")
+        dataset_name = os.path.splitext(os.path.basename(path))[0]
+        output_subdir = os.path.join(algo_output_dir, top_folder)
+        os.makedirs(output_subdir, exist_ok=True)
+
+        iterationTimes = []
+        saved_result = None
+
         for i in range(1, 100):
-            
-            with open(path,'r') as fin:
+            with open(path, 'r') as fin:
                 lines = fin.readlines()
-            
-            inputarray = [line for line in lines]
-            
-            '''if("float" in path or "Sorted/Sorted" in path):
-                inputarray = [float(line) for line in lines]        
-            else:
-                inputarray = [int(line) for line in lines]
-            '''        
-            # print(inputarray[1:10])
-            
-            if(algo is quickSort):
-                start = time.perf_counter()
-                quickSort(inputarray, 0, len(inputarray) - 1)
-                end = time.perf_counter()
-            elif(algo is heap_sort):
-                start = time.perf_counter()
-                heap_sort(inputarray)
-                end = time.perf_counter()
-            elif(algo is introsort):
-                start = time.perf_counter()
-                introsort(inputarray)
-                end = time.perf_counter()
-            elif(algo is bubble_sort):
-                start = time.perf_counter()
-                bubble_sort(inputarray)
-                end = time.perf_counter()
-            elif(algo is TimSort):
-                start = time.perf_counter()
-                TimSort(inputarray)
-                end = time.perf_counter()
-            elif(algo is selectionSort):
-                start = time.perf_counter()
-                selectionSort(inputarray, len(inputarray))
-                end = time.perf_counter()
-            elif(algo is insertion_sort):
-                start = time.perf_counter()
-                insertion_sort(inputarray)
-                end = time.perf_counter()
-            elif(algo is mergeSort):
-                start = time.perf_counter()
-                mergeSort(inputarray, 0, len(inputarray)-1)
-                end = time.perf_counter()
-            elif(algo is Hybrid_sort_700_run):
-                start = time.perf_counter()
-                Hybrid_sort_700_run(inputarray)
-                end = time.perf_counter()
-            else:
-                print(f"{algo} is not defined properly")  
-            
-            timeTaken = end-start        
-            # print(f"Time taken for {path.split("/")[1]}: {timeTaken:.4f}")
-            iterationTimes.append(timeTaken)    
-            
-        _std = np.std(iterationTimes)
-        _median = np.median(iterationTimes)
-        _mean = np.mean(iterationTimes)
-        _max = np.max(iterationTimes)
-        _min = np.min(iterationTimes)
+            inputarray = [int(line.strip()) for line in lines]
 
-        print("""Execution time summary:
-        {:^12} {:^12} {:^12} {:^12} {:^12}
-        {:^12.4f} {:^12.4f} {:^12.4f} {:^12.4f} {:^12.4f}
-                        """.format(
-                    "mean (ms)",
-                    "median (ms)",
-                    "max (ms)",
-                    "min (ms)",
-                    "std (ms)",
-                _mean * 1000,
-                _median * 1000,
-                _max * 1000,
-                _min * 1000,
-                _std * 1000,
-                    ))
+            start = time.perf_counter()
 
-            
+            if algo is quickSort:
+                result = inputarray.copy()
+                quickSort(result, 0, len(result) - 1)
+            elif algo is heap_sort:
+                result = heap_sort(inputarray.copy())
+            elif algo is introsort:
+                result = introsort(inputarray.copy())
+            elif algo is bubble_sort:
+                result = bubble_sort(inputarray.copy())
+            elif algo is TimSort:
+                result = TimSort(inputarray.copy())
+            elif algo is selectionSort:
+                result = selectionSort(inputarray.copy(), len(inputarray))
+            elif algo is insertion_sort:
+                result = insertion_sort(inputarray.copy())
+            elif algo is mergeSort:
+                result = inputarray.copy()
+                mergeSort(result, 0, len(result) - 1)
+            else:
+                result = algo(inputarray)
+
+            end = time.perf_counter()
+
+            if not is_sorted(result):
+                print(f"Warning: {algo_name} failed on {dataset_name} (iter {i})")
+
+            # Save only once
+            if i == 1:
+                saved_result = result
+                save_path = os.path.join(output_subdir, f"{dataset_name}.txt")
+                with open(save_path, "w") as fout:
+                    for val in result:
+                        fout.write(f"{val}\n")
+
+            iterationTimes.append(end - start)
+
+        if len(iterationTimes) == 0:
+            print(f"Skipping {dataset_name} due to empty results")
+            continue
+
+        mean_time = np.mean(iterationTimes) * 1000
+        median_time = np.median(iterationTimes) * 1000
+        max_time = np.max(iterationTimes) * 1000
+        min_time = np.min(iterationTimes) * 1000
+        std_time = np.std(iterationTimes) * 1000
+
+        print(f"Finished {dataset_name} | mean: {mean_time:.2f} ms")
+
+        with open(output_csv, mode='a', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow([algo_name, dataset_name, mean_time, median_time, max_time, min_time, std_time])

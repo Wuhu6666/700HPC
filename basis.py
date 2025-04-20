@@ -148,6 +148,66 @@ def Hybrid_sort_700_run(arr, threshold=10):
 
     return runs[0] if runs else []
 
+
+
+def is_sorted(arr):
+    return all(arr[i] <= arr[i+1] for i in range(len(arr)-1))
+
+def Hybrid_sort_700_run_sorted(arr, threshold=32):
+    n = len(arr)
+
+    if is_sorted(arr):
+        return arr.copy()
+
+    if n <= threshold:
+        return bubble_early_stop(arr)
+
+    runs = []
+    i = 0
+    while i < n:
+        run, next_i = detect_run_fixed(arr, i, threshold)
+        sorted_run = bubble_early_stop(run)
+        runs.append(sorted_run)
+        i = next_i
+
+    while len(runs) > 1:
+        merged = []
+        for j in range(0, len(runs), 2):
+            if j + 1 < len(runs):
+                merged.append(merge(runs[j], runs[j + 1]))
+            else:
+                merged.append(runs[j])
+        runs = merged
+
+    return runs[0] if runs else []
+
+def tim_run_detect_sorted(arr, threshold=32):
+    n = len(arr)
+    if is_sorted(arr):
+        return arr.copy()
+
+    if n <= threshold:
+        return insertion_sort(arr)
+
+    runs = []
+    i = 0
+    while i < n:
+        run, next_i = detect_run_fixed(arr, i, threshold)
+        sorted_run = insertion_sort(run)
+        runs.append(sorted_run)
+        i = next_i
+
+    while len(runs) > 1:
+        merged = []
+        for j in range(0, len(runs), 2):
+            if j + 1 < len(runs):
+                merged.append(merge(runs[j], runs[j + 1]))
+            else:
+                merged.append(runs[j])
+        runs = merged
+
+    return runs[0] if runs else []
+
 # TimSort implementation adapted from https://gist.github.com/ruminations/89a045dc0ef7edfb92304a0de0752ee0
 class TimSort(list):
     __slots__=('_s','_t','_k','_mg')
