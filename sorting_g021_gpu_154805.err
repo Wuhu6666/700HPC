@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "/moosefs/home/s265d007/projects/git2/700HPC/wrapper.py", line 103, in <module>
-    if not is_sorted(result):
-  File "/moosefs/home/s265d007/projects/git2/700HPC/wrapper.py", line 20, in is_sorted
-    return all(arr[i] <= arr[i + 1] for i in range(len(arr) - 1))
-TypeError: object of type 'NoneType' has no len()

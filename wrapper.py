@@ -4,7 +4,7 @@ import numpy as np
 import csv
 import os
 from bubble import bubble_sort
-from introSort import introsort
+from introSort import introSort
 from heapSort import heap_sort
 from quickSort import quickSort
 from timSort import TimSort
@@ -17,6 +17,7 @@ from hpc_project import Hybrid_sort_700_run_sorted
 sys.setrecursionlimit(1000000000)
 
 def is_sorted(arr):
+    print(arr)
     return all(arr[i] <= arr[i + 1] for i in range(len(arr) - 1))
 
 inputList = [
@@ -74,8 +75,8 @@ for algo in sortingAlgos:
         for i in range(1, 100):
             with open(path, 'r') as fin:
                 lines = fin.readlines()
-            inputarray = [int(line.strip()) for line in lines]
-
+            # inputarray = [int(line.strip()) for line in lines]
+            inputarray = [line for line in lines]
             start = time.perf_counter()
 
             if algo is quickSort:
@@ -83,8 +84,8 @@ for algo in sortingAlgos:
                 quickSort(result, 0, len(result) - 1)
             elif algo is heap_sort:
                 result = heap_sort(inputarray.copy())
-            elif algo is introsort:
-                result = introsort(inputarray.copy())
+            elif algo is introSort:
+                result = introSort(inputarray.copy())
             elif algo is bubble_sort:
                 result = bubble_sort(inputarray.copy())
             elif algo is TimSort:
@@ -97,7 +98,7 @@ for algo in sortingAlgos:
                 result = inputarray.copy()
                 mergeSort(result, 0, len(result) - 1)
             else:
-                result = algo(inputarray)
+                result = algo(inputarray.copy())
 
             end = time.perf_counter()
 

@@ -10,12 +10,13 @@ Average-case performance: O(nlogn)
 '''
 
 #A function that takes a list as argument.
-def introsort(alist): 
-    
+def introSort(alist): 
+    print("got alist")
     #maxdepth is chosen equal to 2 times floor of log base 2 of the length of the list.
     maxdepth = (len(alist).bit_length() - 1 ) * 2
     # Call introsort_helper with start = 0 and end = len(blist).
     introsort_helper(alist, 0, len(alist), maxdepth)
+    return alist
  
 #The function sorts the list from indexes start to end. 
 def introsort_helper(alist, start, end, maxdepth):

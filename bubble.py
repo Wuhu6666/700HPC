@@ -11,6 +11,7 @@ def bubble_sort(Array):
                 Array[j], Array[j+1] = Array[j+1], Array[j]
         if flag:
             break   
+    return Array
 
 '''
 Time Complexity: O(n^2)
