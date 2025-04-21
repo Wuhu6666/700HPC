@@ -13,6 +13,18 @@
 
 -----------------------------
 
+#SBATCH --job-name=sorting_benchmark_g021_gpu_2
+#SBATCH --partition=gpu
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=30
+#SBATCH --mem=50G
+#SBATCH --time=23:00:00
+#SBATCH --output=sorting_g021_gpu_2%j.out
+#SBATCH --error=sorting_g021_gpu_2%j.err
+#SBATCH --constraint=gpu,eth_1g,r28c1,asu_int_6_64
+
+
 ## tobe saved as : sorting_g020_gpu_6cores_gpu_4GHz.out(154796) (hybrid th 10) (incomplete bubble sort)
 - #SBATCH --job-name=sorting_benchmark_g020_gpu_1
 - #SBATCH --partition=gpu

@@ -21,32 +21,32 @@ def is_sorted(arr):
     return all(arr[i] <= arr[i + 1] for i in range(len(arr) - 1))
 
 inputList = [
-    'Half_Sorted/half_sorted_1000.txt',
-    'Half_Sorted/half_sorted_5000.txt',
-    'Half_Sorted/half_sorted_10000.txt',
-    'Half_Sorted/half_sorted_50000.txt',
-    'Half_Sorted/half_sorted_100000.txt',
+    # 'Half_Sorted/half_sorted_1000.txt',
+    # 'Half_Sorted/half_sorted_5000.txt',
+    # 'Half_Sorted/half_sorted_10000.txt',
+    # 'Half_Sorted/half_sorted_50000.txt',
     'Random/random_numbers_1000.txt',
     'Random/random_numbers_5000.txt',
     'Random/random_numbers_10000.txt',
     'Random/random_numbers_50000.txt',
-    'Random/random_numbers_100000.txt',
     'Reversed_New/reverse_1000.txt',
     'Reversed_New/reverse_5000.txt',
     'Reversed_New/reverse_10000.txt',
     'Reversed_New/reverse_50000.txt',
-    'Reversed_New/reverse_100000.txt',
     'Sorted_New/Sorted_1000.txt',
     'Sorted_New/Sorted_5000.txt',
     'Sorted_New/Sorted_10000.txt',
     'Sorted_New/Sorted_50000.txt',
-    'Sorted_New/Sorted_100000.txt'
+    'Sorted_New/Sorted_100000.txt',
+    'Random/random_numbers_100000.txt',
+    'Reversed_New/reverse_100000.txt',
+    'Half_Sorted/half_sorted_100000.txt'
 ]
 
 # sortingAlgos = [Hybrid_sort_700_run_sorted,tim_run_detect_sorted,mergeSort,introsort, bubble_sort]
 sortingAlgos = [bubble_sort]
 
-output_csv = 'sorting_results_bubble.csv'
+output_csv = 'sorting_results_bubble_2.csv'
 os.makedirs("sorted_outputs", exist_ok=True)
 
 if os.path.exists(output_csv):
